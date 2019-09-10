@@ -1,0 +1,182 @@
+body{
+    background-color: #f5f5f5;
+}
+
+.mainwrapper1 {
+    width: 320px;
+    height: 640px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -320px;
+    margin-left: -160px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#containerRemote{
+    width: 360px;
+    height: 640px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: #4f4f4f;
+    margin-top: -320px;
+    margin-left: -180px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#containerLocal{
+    width: 90px;
+    height: 180px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -260px;
+    margin-left: 30px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#hangupbtnCall{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: 170px;
+    margin-left: -30px;
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+    background-image: url("../RES/hangup.png");
+    background-repeat: no-repeat;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+}
+
+#hangupbtnbeCalled{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: 170px;
+    margin-left: 40px;
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+    background-image: url("../RES/hangup.png");
+    background-repeat: no-repeat;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+}
+
+#calleeBtn{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: 170px;
+    margin-left: -100px;
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+    background-image: url("../RES/callee.png");
+    background-repeat: no-repeat;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+}
+
+.img img[src=''] {
+    opacity: 0;
+}
+#microMute{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: 170px;
+    margin-left: -100px;
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+    background-image: url("../RES/microMute1.png");
+    background-repeat: no-repeat;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+}
+
+#speakerMute{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: 170px;
+    margin-left: 45px;
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+    background-image: url("../RES/speakerMute1.png");
+    background-repeat: no-repeat;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    border: none;
+}
+
+#coverImg{
+    width: 360px;
+    height: 640px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -320px;
+    margin-left: -180px;
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+
+    background-image: url("../RES/phonebackground.png");
+    background-repeat: no-repeat;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+}
+
+.callerInfoDiv{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -190px;
+    margin-left: -60px;
+    background: #4f4f4f;
+}
+
+#callerIcon{
+    width: 80px;
+    height: 80px;
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    border-color: #4f4f4f;
+    margin-left: 20px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#callerID{
+    width: 120px;
+    height: 80px;
+    background: #4f4f4f;
+    color: white;
+    text-align: center;
+    border: none;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.Logcat{
+    width: 400px;
+    height: 197px;
+    position: fixed;
+    background: #4f4f4f;
+    color: white;
+    right: 0px;
+    top: 0px;
+    border: 1px #000000;
+    padding: 2px;
+}
+
+
+

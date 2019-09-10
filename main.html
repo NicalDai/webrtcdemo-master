@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>准备通话</title>
+    <link rel="stylesheet" href="css/login.css"/>
+    <link rel="stylesheet" href="css/call.css"/>
+    <link rel="icon" href="https://app.yunxin.163.com/webdemo/im/images/icon.ico" type="image/x-icon"/>
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+</head>
+<body>
+
+<div class="mainwrapper">
+    <div class="wrapper radius10px" id="j-wrapper">
+        <form action="/" method="post">
+            <div class="row tc">
+                <span class="icon icon-pwd"></span>
+                <input  class="radius5px box-sizing" id="targetAccid" placeholder="请输入被叫号码"/>
+            </div>
+            <div class="row tc">
+                <button type="button" class="btn btn-login" id="startCall">开始通话</button>
+            </div>
+        </form>
+    </div>
+    <div class="logoutBtn">
+        <button type="button" class="btn-logout" id="logoutBtn">登出</button>
+    </div>
+    <div class="mainwrapper1" id="mainwrapper1" style="display: none">
+        <div id="containerRemote"></div>
+        <div id="containerLocal"></div>
+        <div id="coverImg"></div>
+        <div class="callerInfoDiv" id="callerInfoDiv" style="display: none" >
+            <img class="callerIcon" id="callerIcon"/>
+            <textarea class="callerIDTx" id="callerID"></textarea>
+        </div>
+        <div id="hangupbtnbeCalled" style="display: none"></div>
+        <div id="hangupbtnCall" style="display: none"></div>
+        <div id="calleeBtn" style="display: none"></div>
+        <img id="microMute" style="display: none" src="res/microMute1.png">
+        <img id="speakerMute" style="display: none" src="res/speakerMute1.png">
+    </div>
+</div>
+
+<div class="Logcat">
+    <textarea id="log" rows="15" cols="70"></textarea>
+</div>
+
+<script src="js/Module/md5.js"></script>
+<script src="sdk/NIM_Web_SDK_v6.7.0.js"></script>
+<script src="sdk/NIM_Web_WebRTC_v6.7.0.js"></script>
+
+<script src="js/Module/util.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
