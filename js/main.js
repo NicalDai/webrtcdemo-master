@@ -66,13 +66,13 @@ window.onload = function () {
                 }).catch(function(err) {
                     console.log('启动麦克风失败', err);
                 });
-                microMuteBtn.src = 'RES/microMute1.png';
+                microMuteBtn.src = 'res/microMute1.png';
                 isLocalAudioMuted = false;
             }else {
                 netcall.stopDevice(Netcall.DEVICE_TYPE_AUDIO_IN).then(function() {
                     console.log('麦克风关闭成功')
                 });
-                microMuteBtn.src = 'RES/microMute2.png';
+                microMuteBtn.src = 'res/microMute2.png';
                 isLocalAudioMuted = true;
             }
         }
@@ -82,11 +82,11 @@ window.onload = function () {
         if (isCalling){
             if (isRemoteAudioMuted){
                 netcall.setAudioStart(targetAccid);
-                speakerMuteBtn.src = 'RES/speakerMute1.png';
+                speakerMuteBtn.src = 'res/speakerMute1.png';
                 isRemoteAudioMuted = false;
             } else {
                 netcall.setAudioBlack(targetAccid);
-                speakerMuteBtn.src = 'RES/speakerMute2.png';
+                speakerMuteBtn.src = 'res/speakerMute2.png';
                 isRemoteAudioMuted = true;
             }
         }
@@ -147,7 +147,7 @@ var nim = SDK.NIM.getInstance({
 });
 
 function onMsg(msg) {
-    console.log("收到消息"+ msg);
+    console.log("收到消息", msg);
 }
 
 
@@ -348,8 +348,8 @@ function startRTCConnect() {
     }).then(function() {
             netcall.setCaptureVolume(255);                                      // Set cap vioce vloume
             return netcall.startDevice({                                        // Open camera
-                // type: Netcall.DEVICE_TYPE_VIDEO
-                type: Netcall.DEVICE_TYPE_DESKTOP_CHROME_SCREEN
+                type: Netcall.DEVICE_TYPE_VIDEO
+                // type: Netcall.DEVICE_TYPE_DESKTOP_CHROME_SCREEN
             }).catch(function(err) {
                     console.log('Enable Camera Failed');
                     console.error(err)
@@ -498,8 +498,8 @@ function resetUI() {
     calleeBtn.style.display = 'none';
     microMuteBtn.style.display = 'none';
     speakerMuteBtn.style.display = 'none';
-    microMuteBtn.src = 'RES/microMute1.png';
-    speakerMuteBtn.src = 'RES/speakerMute1.png';
+    microMuteBtn.src = 'res/microMute1.png';
+    speakerMuteBtn.src = 'res/speakerMute1.png';
 }
 
 function httpPost() {
@@ -517,7 +517,7 @@ function httpPost() {
             console.log(xhr.status);
         }
     };
-    xhr.open('POST','../../php/hall/hello_demo.php',true);
+    xhr.open('POST','../../php/hall/demo/hello_demo.php',true);
     xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");  //formdata数据请求头需设置为application/x-www-form-urlencoded
     console.log(forms);
     xhr.send(forms);

@@ -86,7 +86,7 @@ body {
     margin-left: -180px;
     -moz-background-size:100% 100%;
     background-size:100% 100%;
-    background-image: url("../RES/phonebackground.png");
+    background-image: url("../res/phonebackground.png");
     background-repeat: no-repeat;
     filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
 }

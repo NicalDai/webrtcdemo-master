@@ -46,7 +46,7 @@ body{
     margin-left: -30px;
     -moz-background-size:100% 100%;
     background-size:100% 100%;
-    background-image: url("../RES/hangup.png");
+    background-image: url("../res/hangup.png");
     background-repeat: no-repeat;
     filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
 }
@@ -61,7 +61,7 @@ body{
     margin-left: 40px;
     -moz-background-size:100% 100%;
     background-size:100% 100%;
-    background-image: url("../RES/hangup.png");
+    background-image: url("../res/hangup.png");
     background-repeat: no-repeat;
     filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
 }
@@ -76,7 +76,7 @@ body{
     margin-left: -100px;
     -moz-background-size:100% 100%;
     background-size:100% 100%;
-    background-image: url("../RES/callee.png");
+    background-image: url("../res/callee.png");
     background-repeat: no-repeat;
     filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
 }
@@ -94,7 +94,7 @@ body{
     margin-left: -100px;
     -moz-background-size:100% 100%;
     background-size:100% 100%;
-    background-image: url("../RES/microMute1.png");
+    background-image: url("../res/microMute1.png");
     background-repeat: no-repeat;
     filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
 }
@@ -109,7 +109,7 @@ body{
     margin-left: 45px;
     -moz-background-size:100% 100%;
     background-size:100% 100%;
-    background-image: url("../RES/speakerMute1.png");
+    background-image: url("../res/speakerMute1.png");
     background-repeat: no-repeat;
     filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
     border: none;
@@ -126,7 +126,7 @@ body{
     -moz-background-size:100% 100%;
     background-size:100% 100%;
 
-    background-image: url("../RES/phonebackground.png");
+    background-image: url("../res/phonebackground.png");
     background-repeat: no-repeat;
     filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
 }
