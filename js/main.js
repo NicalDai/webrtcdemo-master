@@ -29,12 +29,14 @@ var speakerMuteBtn;         // mute receiving voice stream
 var Netcall = WebRTC;       // WebRTC instance from SDK
 var netcall;                // WebRTC instance initialized
 
+var currentAccid;           // current Logined accid;
+
 /**
  * Window UI Bridge
  */
 window.onload = function () {
 
-    // httpPost();
+    httpPost();
     var targetAccidEdt = document.getElementById('targetAccid');
     var startCallBtn = document.getElementById('startCall');
     var logoutBtn = document.getElementById('logoutBtn');
@@ -98,7 +100,6 @@ window.onload = function () {
         }else if (!isLogined){
             alert('Please Login first!');
         } else {
-            initWebRTC();
             forwardCall(targetAccid);                                           //Main Enterance of WebRTC
         }
     };
@@ -139,7 +140,7 @@ var nim = SDK.NIM.getInstance({
     appKey: '45c6af3c98409b18a84451215d0bdd6e',
     account: readCookie('accid'),
     token: readCookie('token'),
-    onconnect: onConnect(readCookie('accid')),
+    onconnect: onConnect,
     onwillreconnect: onWillReconnect,
     ondisconnect: onDisconnect,
     onerror: onError,
@@ -151,11 +152,12 @@ function onMsg(msg) {
 }
 
 
-function onConnect(accid) {
+function onConnect() {
     isLogined = true;
     console.log('Connection Established');
-    document.getElementById('log').value += 'Login Success '+accid+'\n';
-
+    console.log(nim);
+    document.getElementById('log').value += 'Login Success '+ readCookie('accid') +'\n';
+    initWebRTC();
 }
 function onWillReconnect(obj) {
     console.log('Will Reconnect ' + obj.retryCount +' ' + obj.duration );
@@ -211,7 +213,7 @@ function initWebRTC() {
         container: document.getElementById('containerLocal'),
         remoteContainer: document.getElementById('containerRemote'),
         // chromeId: '',                                                        //Screen capture and Sharing
-        // debug: true                                                          // Enable debug log print?
+        debug: true                                                          // Enable debug log print?
     });
     registerObserver();
 }
@@ -508,17 +510,6 @@ function httpPost() {
     forms.append('type','3');
     forms.append('token',time+MD5(time));
     let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function(){
-        if(xhr.readyState===4){
-            if(xhr.status>=200&&xhr.status<=300||xhr.status===304){
-                console.log(xhr.response);
-            }
-        }else{
-            console.log(xhr.status);
-        }
-    };
     xhr.open('POST','../../php/hall/demo/hello_demo.php',true);
-    xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");  //formdata数据请求头需设置为application/x-www-form-urlencoded
-    console.log(forms);
     xhr.send(forms);
 }
